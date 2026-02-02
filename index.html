@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalización en Ecuador - Proyecto Final</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">🇪🇨 Digitalización Ecuador</h1>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#linea-tiempo" class="nav-link">Línea de Tiempo</a></li>
+                <li><a href="#indicadores" class="nav-link">Indicadores</a></li>
+                <li><a href="#comparacion" class="nav-link">Comparación</a></li>
+                <li><a href="#leyes" class="nav-link">Leyes</a></li>
+                <li><a href="#datos" class="nav-link">Datos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>¿Cuán Digitales Somos en Ecuador?</h1>
+            <p>Análisis completo de la digitalización en Ecuador: indicadores, leyes, evolución y comparación internacional</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <i class="fas fa-percentage"></i>
+                    <h3 id="porcentaje-digitalizacion">--%</h3>
+                    <p>Digitalización en Ecuador</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-signature"></i>
+                    <h3 id="firmas-electronicas">--</h3>
+                    <p>Firmas Electrónicas</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3 id="tramites-digitales">--</h3>
+                    <p>Trámites Digitales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Línea de Tiempo -->
+    <section id="linea-tiempo" class="section">
+        <div class="container">
+            <h2 class="section-title">Línea de Tiempo: Evolución del Internet y Leyes en Ecuador</h2>
+            <div class="timeline-container">
+                <div class="timeline" id="timeline"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Indicadores -->
+    <section id="indicadores" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Indicadores de Digitalización</h2>
+            <div class="indicators-grid">
+                <div class="indicator-card">
+                    <i class="fas fa-signature"></i>
+                    <h3>Firma Electrónica</h3>
+                    <p class="indicator-value" id="ind-firma">Cargando...</p>
+                    <p class="indicator-desc">Personas con firma electrónica en Ecuador</p>
+                </div>
+                <div class="indicator-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Trámites Digitales</h3>
+                    <p class="indicator-value" id="ind-tramites">Cargando...</p>
+                    <p class="indicator-desc">Trámites disponibles digitalmente</p>
+                </div>
+                <div class="indicator-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Compras Digitales</h3>
+                    <p class="indicator-value" id="ind-compras">Cargando...</p>
+                    <p class="indicator-desc">% de compras realizadas digitalmente</p>
+                </div>
+                <div class="indicator-card">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3>Facturación Electrónica</h3>
+                    <p class="indicator-value" id="ind-facturacion">Cargando...</p>
+                    <p class="indicator-desc">% de empresas con facturación electrónica</p>
+                </div>
+                <div class="indicator-card">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Inversión en Internet</h3>
+                    <p class="indicator-value" id="ind-inversion">Cargando...</p>
+                    <p class="indicator-desc">Inversión en infraestructura de internet</p>
+                </div>
+                <div class="indicator-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Gasto en Tecnología</h3>
+                    <p class="indicator-value" id="ind-gasto-tech">Cargando...</p>
+                    <p class="indicator-desc">% de bonos destinados a tecnología</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Comparación -->
+    <section id="comparacion" class="section">
+        <div class="container">
+            <h2 class="section-title">Comparación Internacional</h2>
+            <div class="comparison-container">
+                <div class="comparison-chart">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>País</th>
+                                <th>% Digitalización</th>
+                                <th>Número de Leyes</th>
+                                <th>Firmas Electrónicas</th>
+                                <th>Trámites Digitales</th>
+                            </tr>
+                        </thead>
+                        <tbody id="comparisonTableBody">
+                            <tr>
+                                <td>🇪🇨 Ecuador</td>
+                                <td id="ec-digitalizacion">--</td>
+                                <td id="ec-leyes">--</td>
+                                <td id="ec-firmas">--</td>
+                                <td id="ec-tramites">--</td>
+                            </tr>
+                            <tr>
+                                <td>🇨🇳 China</td>
+                                <td id="cn-digitalizacion">--</td>
+                                <td id="cn-leyes">--</td>
+                                <td id="cn-firmas">--</td>
+                                <td id="cn-tramites">--</td>
+                            </tr>
+                            <tr>
+                                <td>🇨🇱 Chile</td>
+                                <td id="cl-digitalizacion">--</td>
+                                <td id="cl-leyes">--</td>
+                                <td id="cl-firmas">--</td>
+                                <td id="cl-tramites">--</td>
+                            </tr>
+                            <tr>
+                                <td>🇲🇽 México</td>
+                                <td id="mx-digitalizacion">--</td>
+                                <td id="mx-leyes">--</td>
+                                <td id="mx-firmas">--</td>
+                                <td id="mx-tramites">--</td>
+                            </tr>
+                            <tr>
+                                <td>🇺🇸 USA</td>
+                                <td id="us-digitalizacion">--</td>
+                                <td id="us-leyes">--</td>
+                                <td id="us-firmas">--</td>
+                                <td id="us-tramites">--</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Leyes -->
+    <section id="leyes" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Análisis de Leyes de Digitalización</h2>
+            <div class="laws-container" id="lawsContainer"></div>
+        </div>
+    </section>
+
+    <!-- Sección Datos por Edades y Productos -->
+    <section id="datos" class="section">
+        <div class="container">
+            <h2 class="section-title">Datos por Edades y Productos</h2>
+            <div class="data-tabs">
+                <button class="tab-button active" data-tab="edades">Por Edades</button>
+                <button class="tab-button" data-tab="productos">Por Productos</button>
+            </div>
+            <div class="tab-content active" id="edades-tab">
+                <div class="chart-container">
+                    <canvas id="edadesChart"></canvas>
+                </div>
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rango de Edad</th>
+                                <th>Compras Digitales (%)</th>
+                                <th>Compras Físicas (%)</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="edadesTableBody">
+                            <!-- Se llenará con datos -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-content" id="productos-tab">
+                <div class="chart-container">
+                    <canvas id="productosChart"></canvas>
+                </div>
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoría de Producto</th>
+                                <th>Compras Digitales (%)</th>
+                                <th>Compras Físicas (%)</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productosTableBody">
+                            <!-- Se llenará con datos -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para detalles de línea de tiempo -->
+    <div id="timelineModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalYear" class="modal-year"></h2>
+                <h3 id="modalTitle" class="modal-title"></h3>
+                <span id="modalType" class="modal-type"></span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h4><i class="fas fa-info-circle"></i> ¿Qué pasó?</h4>
+                    <p id="modalQuePaso"></p>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-question-circle"></i> ¿Por qué se dio?</h4>
+                    <p id="modalPorQue"></p>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-globe"></i> Contexto</h4>
+                    <p id="modalContexto"></p>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-chart-line"></i> Impacto</h4>
+                    <p id="modalImpacto"></p>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-check-circle"></i> Casos Resueltos</h4>
+                    <p id="modalCasos"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Proyecto Final - Digitalización en Ecuador</p>
+            <p>Fuentes de datos: Ministerios, SRI, Comercio Exterior, Estadísticas Nacionales</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
