@@ -71,13 +71,13 @@ const timelineData = [
         type: "law",
         law: "Constitución 2008 - Art. 16, 17, 18",
         details: {
-            quePaso: "La nueva Constitución de Ecuador reconoce por primera vez los derechos digitales como derechos fundamentales. Los artículos 16, 17 y 18 establecen el derecho al acceso universal a las tecnologías de la información y comunicación.",
+            quePaso: "La Constitución de 2008 reconoce por primera vez los derechos digitales en la Sección tercera «Comunicación e Información» (Cap. II, Derechos del buen vivir). Art. 16: derecho a comunicación libre y al acceso universal a las TIC; derecho a crear medios y a usar espectro y bandas libres para redes inalámbricas; inclusión de personas con discapacidad. Art. 17: el Estado debe fomentar pluralidad, asignar frecuencias con transparencia, facilitar el acceso universal a las TIC (especialmente a quien carece o tiene acceso limitado) y evitar monopolios en medios. Art. 18: derecho a buscar, recibir y difundir información sin censura previa (con responsabilidad ulterior) y a acceder libremente a la información en entidades públicas (reserva solo cuando la ley lo establezca).",
             porQue: "Ecuador necesitaba reconocer constitucionalmente el derecho al acceso a la tecnología como parte de los derechos fundamentales. Esto respondía a la necesidad de garantizar la inclusión digital y reducir la brecha tecnológica.",
             contexto: "En 2008, Ecuador estaba en un proceso de refundación del Estado. La nueva Constitución buscaba ser más inclusiva y reconocer derechos emergentes en la era digital. Fue una de las primeras constituciones en América Latina en reconocer derechos digitales.",
-            impacto: "Estableció las bases constitucionales para políticas de inclusión digital, acceso universal a internet, y protección de derechos en el entorno digital. Obligó al Estado a garantizar el acceso a tecnologías de información.",
-            casosResueltos: "Proporcionó marco legal para políticas de conectividad, programas de inclusión digital, y estableció que el acceso a internet es un derecho fundamental que el Estado debe garantizar.",
-            fuenteVerificacion: "Constitución de la República del Ecuador 2008; Registro Oficial; Asamblea Constituyente.",
-            queSeReviso: "Artículos 16, 17 y 18 de la Constitución (derecho al acceso a las TIC, comunicación e información); informe de la Asamblea Constituyente."
+            impacto: "Estableció las bases constitucionales para políticas de inclusión digital, acceso universal a internet, transparencia y acceso a la información pública, y protección de derechos en el entorno digital. Obligó al Estado a garantizar el acceso a las TIC.",
+            casosResueltos: "Marco legal para políticas de conectividad, programas de inclusión digital, portales de transparencia y datos abiertos; el acceso a internet y a la información pública quedan como derechos fundamentales.",
+            fuenteVerificacion: "Constitución de la República del Ecuador 2008 (Registro Oficial 449, 20 oct 2008); Asamblea Constituyente; gob.ec/regulaciones; pdba.georgetown.edu.",
+            queSeReviso: "Artículos 16, 17 y 18 de la Constitución (texto completo en docs/CONSTITUCION_ART_16_17_18.md)."
         }
     },
     {
