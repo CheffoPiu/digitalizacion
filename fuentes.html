@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuentes y metodología - Digitalización Ecuador</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🇪🇨 Digitalización Ecuador</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#linea-tiempo" class="nav-link">Línea de Tiempo</a></li>
+                <li><a href="index.html#indicadores" class="nav-link">Indicadores</a></li>
+                <li><a href="index.html#comparacion" class="nav-link">Comparación</a></li>
+                <li><a href="index.html#leyes" class="nav-link">Leyes</a></li>
+                <li><a href="index.html#datos" class="nav-link">Datos</a></li>
+                <li><a href="fuentes.html" class="nav-link nav-link-active">Fuentes</a></li>
+                <li><a href="datos-evaluacion.html" class="nav-link">Datos evaluación</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section hero-fuentes">
+        <div class="container">
+            <h1><i class="fas fa-database"></i> Fuentes y metodología</h1>
+            <p class="hero-fuentes-intro">En esta página encontrarás, por cada tema de la investigación, qué datos se utilizaron, de dónde se obtuvieron, qué se hizo con ellos y cómo puedes indagar más. Todas las cifras están referenciadas a fuentes verificables.</p>
+            <div class="hero-datos-eval-links">
+                <a href="datos-evaluacion.html" class="btn-fuente"><i class="fas fa-table"></i> Ver datos utilizados en la evaluación</a>
+                <a href="index.html" class="btn-fuente btn-fuente-secundario"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <!-- Datos más actuales 2025-2026 - contenido detallado -->
+            <div class="datos-actuales-seccion">
+                <h2><i class="fas fa-calendar-alt"></i> Datos más actuales (2025 y 2026)</h2>
+                <p class="datos-actuales-intro">El EGDI que usamos en esta investigación es de 2024. Aquí se detalla qué ofrece cada fuente para 2025-2026.</p>
+
+                <!-- Cifras actuales en pantalla -->
+                <div class="cifras-actuales">
+                    <h3><i class="fas fa-chart-line"></i> Cifras actuales</h3>
+                    <div class="cifras-actuales-grid" id="cifras-actuales-contenedor">
+                        <!-- Rellenado por script desde data.js -->
+                    </div>
+                </div>
+
+                <div class="datos-actuales-grid">
+                    <div class="datos-actuales-card">
+                        <h3>UN E-Government Survey (EGDI)</h3>
+                        <dl>
+                            <dt>Datos que ofrece</dt>
+                            <dd>Índice de desarrollo de gobierno electrónico (EGDI), rank por país, E-Participation, serie histórica.</dd>
+                            <dt>Año más reciente</dt>
+                            <dd><strong>2024</strong> (publicado 2024). Próxima edición prevista: <strong>2026</strong> (encuesta bienal).</dd>
+                            <dt>Cómo usarlos</dt>
+                            <dd>No hay EGDI oficial 2025; el siguiente dato comparable será la edición 2026. Mientras tanto se mantiene 2024.</dd>
+                        </dl>
+                        <a href="https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/52-Ecuador" target="_blank" rel="noopener" class="btn-fuente btn-fuente-small">Perfil Ecuador (UN)</a>
+                    </div>
+
+                    <div class="datos-actuales-card">
+                        <h3>ITU – Estadísticas de internet</h3>
+                        <dl>
+                            <dt>Datos que ofrece</dt>
+                            <dd>Uso de internet (% población), por regiones, por nivel de desarrollo (ingreso), crecimiento interanual.</dd>
+                            <dt>Año más reciente</dt>
+                            <dd><strong>2025</strong> (informes con datos 2024 y 2025). Cifras globales: ej. 74% población mundial usa internet (2025).</dd>
+                            <dt>Cómo usarlos</dt>
+                            <dd>Sirve para comparar tendencias internacionales y actualizar indicadores de penetración de internet más allá del World Bank.</dd>
+                        </dl>
+                        <a href="https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx" target="_blank" rel="noopener" class="btn-fuente btn-fuente-small">Estadísticas ITU</a>
+                    </div>
+
+                    <div class="datos-actuales-card">
+                        <h3>ARCOTEL (Ecuador)</h3>
+                        <dl>
+                            <dt>Datos que ofrece</dt>
+                            <dd>Líneas activas (fija, móvil), acceso a internet, densidad por servicio, estadísticas mensuales del sector.</dd>
+                            <dt>Año más reciente</dt>
+                            <dd><strong>2025</strong> (datos mensuales, p. ej. enero–abril según publicaciones).</dd>
+                            <dt>Cómo usarlos</dt>
+                            <dd>Para indicadores de Ecuador: cobertura, líneas móviles, penetración de internet y evolución reciente.</dd>
+                        </dl>
+                        <a href="https://www.arcotel.gob.ec/estadisticas-de-telecomunicaciones/" target="_blank" rel="noopener" class="btn-fuente btn-fuente-small">Estadísticas ARCOTEL</a>
+                        <a href="https://www.arcotel.gob.ec/lineas-activas/" target="_blank" rel="noopener" class="btn-fuente btn-fuente-small btn-outline">Líneas activas</a>
+                    </div>
+
+                    <div class="datos-actuales-card">
+                        <h3>Datos Abiertos Ecuador</h3>
+                        <dl>
+                            <dt>Datos que ofrece</dt>
+                            <dd>Conjuntos de datos públicos: registro social, variables demográficas (edad, sexo, etc.) a nivel parroquia, en CSV.</dd>
+                            <dt>Año más reciente</dt>
+                            <dd><strong>2025</strong> (conjuntos publicados en 2025).</dd>
+                            <dt>Cómo usarlos</dt>
+                            <dd>Para cruces demográficos, inclusión digital por territorio o para complementar indicadores con datos oficiales abiertos.</dd>
+                        </dl>
+                        <a href="https://www.datosabiertos.gob.ec/" target="_blank" rel="noopener" class="btn-fuente btn-fuente-small">Portal Datos Abiertos</a>
+                    </div>
+
+                    <div class="datos-actuales-card">
+                        <h3>Política Transformación Digital 2025-2030</h3>
+                        <dl>
+                            <dt>Datos que ofrece</dt>
+                            <dd>Documento oficial (MINTEL): metas, ejes y marco de la transformación digital en Ecuador.</dd>
+                            <dt>Año más reciente</dt>
+                            <dd>Vigencia <strong>2025-2030</strong>.</dd>
+                            <dt>Cómo usarlos</dt>
+                            <dd>Para enmarcar la investigación y citar objetivos oficiales de digitalización; no reemplaza indicadores numéricos.</dd>
+                        </dl>
+                        <a href="https://www.gobiernoelectronico.gob.ec/" target="_blank" rel="noopener" class="btn-fuente btn-fuente-small">Gobierno Electrónico Ecuador</a>
+                    </div>
+
+                    <div class="datos-actuales-card">
+                        <h3>World Bank</h3>
+                        <dl>
+                            <dt>Datos que ofrece</dt>
+                            <dd>Usuarios de internet (% población), banda ancha fija, suscripciones móviles por país.</dd>
+                            <dt>Año más reciente</dt>
+                            <dd>Hasta <strong>2023 o 2024</strong> según país e indicador (actualización con rezago).</dd>
+                            <dt>Cómo usarlos</dt>
+                            <dd>Comparación internacional estable; para datos más recientes por región usar ITU.</dd>
+                        </dl>
+                        <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=EC" target="_blank" rel="noopener" class="btn-fuente btn-fuente-small">Internet users (World Bank)</a>
+                    </div>
+                </div>
+
+                <div class="datos-actuales-pasos">
+                    <h3><i class="fas fa-tasks"></i> Cómo actualizar este proyecto con datos más recientes</h3>
+                    <ol>
+                        <li><strong>EGDI:</strong> Mantener 2024 hasta que se publique el UN E-Government Survey 2026; entonces actualizar valor y rank desde la web de la ONU.</li>
+                        <li><strong>Internet / telecomunicaciones Ecuador:</strong> Usar ARCOTEL (estadísticas y líneas activas 2025) para cifras recientes de cobertura y penetración.</li>
+                        <li><strong>Comparación internacional:</strong> Revisar ITU para datos 2024-2025 por regiones o países.</li>
+                        <li><strong>Contexto y políticas:</strong> Citar la Política de Transformación Digital 2025-2030 y, si aplica, conjuntos de Datos Abiertos Ecuador 2025.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div id="fuentes-pagina-contenedor" class="fuentes-pagina-contenedor">
+                <!-- Se llena con JS -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Proyecto Final - Digitalización en Ecuador</p>
+            <p><a href="index.html" style="color: rgba(255,255,255,0.9);">Volver al inicio</a></p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script>
+        (function() {
+            if (typeof fuentesYMetodologia === 'undefined') return;
+            var contenedor = document.getElementById('fuentes-pagina-contenedor');
+            if (!contenedor) return;
+
+            var partes = ['cuanDigitalesSomos', 'indicadorEGDI', 'firmaElectronica', 'tramitesDigitales', 'facturacionElectronica', 'leyes', 'eParticipation', 'leyesTIC', 'hogaresInternet', 'comercioElectronico', 'pagosDigitales', 'datosAbiertos'];
+
+            var keyToId = {
+                cuanDigitalesSomos: 'fuente-cuan-digitales-somos',
+                indicadorEGDI: 'fuente-indicador-egdi',
+                firmaElectronica: 'fuente-firma-electronica',
+                tramitesDigitales: 'fuente-tramites-digitales',
+                facturacionElectronica: 'fuente-facturacion-electronica',
+                leyes: 'fuente-leyes',
+                eParticipation: 'fuente-e-participation',
+                leyesTIC: 'fuente-leyes-tic',
+                hogaresInternet: 'fuente-hogares-internet',
+                comercioElectronico: 'fuente-comercio-electronico',
+                pagosDigitales: 'fuente-pagos-digitales',
+                datosAbiertos: 'fuente-datos-abiertos'
+            };
+
+            partes.forEach(function(key) {
+                var f = fuentesYMetodologia[key];
+                if (!f) return;
+
+                var datosHtml = '';
+                if (f.datosUtilizados && f.datosUtilizados.length) {
+                    datosHtml = '<ul class="fuentes-lista-datos">' + f.datosUtilizados.map(function(d) {
+                        return '<li><span class="dato-nombre">' + d.nombre + '</span><span class="dato-valor">' + d.valor + '</span><span class="dato-origen">' + d.origen + '</span></li>';
+                    }).join('') + '</ul>';
+                }
+
+                var card = document.createElement('div');
+                card.className = 'fuente-card-pagina';
+                card.id = keyToId[key] || ('fuente-' + key);
+                card.innerHTML =
+                    '<h2>' + f.titulo + '</h2>' +
+                    '<div class="fuente-card-pagina-body">' +
+                    '<div class="fuentes-seccion"><h4><i class="fas fa-list"></i> Datos utilizados</h4>' + (datosHtml || '<p>—</p>') + '</div>' +
+                    '<div class="fuentes-seccion"><h4><i class="fas fa-map-marker-alt"></i> Dónde se encontró</h4><p class="fuente-parrafo">' + f.dondeSeEncontro + '</p></div>' +
+                    '<div class="fuentes-seccion"><h4><i class="fas fa-cogs"></i> Qué se hizo</h4><p class="fuente-parrafo">' + f.queSeHizo + '</p></div>' +
+                    '<div class="fuentes-seccion"><h4><i class="fas fa-search"></i> Cómo indagar más</h4><p class="fuente-parrafo">' + f.comoIndagarMas + '</p></div>' +
+                    '<a href="' + f.urlFuente + '" target="_blank" rel="noopener" class="btn-fuente">Ver fuente oficial →</a>' +
+                    (f.fechaConsulta ? '<p class="fuente-fecha">Fecha de consulta: ' + f.fechaConsulta + '</p>' : '') +
+                    '</div>';
+                contenedor.appendChild(card);
+            });
+        })();
+
+        (function() {
+            if (typeof datosActualesCifras === 'undefined') return;
+            var contenedor = document.getElementById('cifras-actuales-contenedor');
+            if (!contenedor) return;
+            datosActualesCifras.forEach(function(c) {
+                var div = document.createElement('div');
+                div.className = 'cifra-actual-item';
+                div.innerHTML = '<span class="cifra-actual-valor">' + c.valor + '</span>' +
+                    '<span class="cifra-actual-etiqueta">' + c.etiqueta + '</span>' +
+                    '<span class="cifra-actual-fuente">' + c.fuente + ' · ' + c.anio + '</span>';
+                contenedor.appendChild(div);
+            });
+        })();
+    </script>
+</body>
+</html>

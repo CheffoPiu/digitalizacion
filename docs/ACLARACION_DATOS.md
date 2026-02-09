@@ -40,42 +40,28 @@ Este documento aclara qué datos son **reales y verificados** y cuáles son **va
 
 ### 2. Indicadores de Digitalización
 
-**Todos estos valores son EJEMPLOS y deben ser reemplazados con datos reales:**
+**Datos reales ya integrados (World Bank 2022):**
+- ✅ **usuariosInternet:** 65% (IT.NET.USER.ZS)
+- ✅ **bandaAncha:** 12.5 suscripciones por 100 hab.
+- ✅ **movil:** 108.5 suscripciones por 100 hab.
 
-```javascript
-// ❌ VALORES DE EJEMPLO - NO SON REALES
-firmaElectronica: "2,500,000 personas"  // Necesita datos de ARCOTEL o entidad emisora
-tramitesDigitales: "450+ trámites"      // Necesita datos de cada ministerio
-comprasDigitales: "35%"                  // Necesita datos de INEC (ENTIC)
-facturacionElectronica: "85%"           // Necesita datos del SRI
-inversionInternet: "$500M USD"          // Necesita datos de ARCOTEL/Banco Central
-gastoTecnologia: "12%"                  // Necesita datos de encuestas/estudios
-```
+**Referencia / por confirmar con fuentes oficiales:**
+- firmaElectronica: 2,500,000 (ARCOTEL o entidad emisora)
+- tramitesDigitales: 450+ (portales gubernamentales)
+- facturacionElectronica: 85% (SRI)
 
-**Fuentes reales para obtener estos datos:**
-- INEC: Encuesta de Tecnologías de la Información y Comunicación (ENTIC)
-- SRI: Reportes de facturación electrónica
-- ARCOTEL: Estadísticas de telecomunicaciones
-- Banco Central: Inversión en infraestructura
+**Fuentes para ampliar:** INEC ENTIC, SRI reportes, ARCOTEL.
 
 ### 3. Comparación Internacional
 
-**Todos estos valores son EJEMPLOS:**
+**Datos reales integrados (World Bank 2022 – usuarios de internet % población):**
+- ✅ Ecuador: 65%
+- ✅ China: 76%
+- ✅ Chile: 88%
+- ✅ México: 72%
+- ✅ USA: 92%
 
-```javascript
-// ❌ VALORES DE EJEMPLO - NO SON REALES
-ecuador: { digitalizacion: "35%", leyes: 8, ... }
-china: { digitalizacion: "85%", leyes: 50, ... }
-chile: { digitalizacion: "65%", leyes: 15, ... }
-mexico: { digitalizacion: "55%", leyes: 12, ... }
-usa: { digitalizacion: "90%", leyes: 30, ... }
-```
-
-**Fuentes reales:**
-- World Bank API: Para datos de digitalización por país
-- ITU (International Telecommunication Union): Estadísticas de telecomunicaciones
-- UN E-Government Survey: Índices de gobierno electrónico
-- Bases de datos de leyes de cada país
+El hero muestra **EGDI 78%** (UN 2024) para Ecuador; la tabla y el gráfico de comparación usan **usuarios de internet** del World Bank para todos los países.
 
 ### 4. Datos por Edades y Productos
 

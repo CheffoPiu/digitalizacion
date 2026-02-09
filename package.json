@@ -1,0 +1,9 @@
+{
+  "name": "digitalizacion-ecuador",
+  "version": "1.0.0",
+  "description": "Proyecto Final - Digitalización en Ecuador",
+  "scripts": {
+    "start": "npx --yes serve -l 3000",
+    "serve": "npx --yes serve -l 3000"
+  }
+}

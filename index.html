@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitalización en Ecuador - Proyecto Final</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -19,6 +22,8 @@
                 <li><a href="#comparacion" class="nav-link">Comparación</a></li>
                 <li><a href="#leyes" class="nav-link">Leyes</a></li>
                 <li><a href="#datos" class="nav-link">Datos</a></li>
+                <li><a href="fuentes.html" class="nav-link">Fuentes</a></li>
+                <li><a href="datos-evaluacion.html" class="nav-link">Datos evaluación</a></li>
             </ul>
         </div>
     </nav>
@@ -28,11 +33,54 @@
         <div class="hero-content">
             <h1>¿Cuán Digitales Somos en Ecuador?</h1>
             <p>Análisis completo de la digitalización en Ecuador: indicadores, leyes, evolución y comparación internacional</p>
+            <p class="hero-fecha-resumen"><em>Resumen actualizado con datos hasta 2025 donde hay fuente disponible; indicadores internacionales (ONU, World Bank) según último año publicado por cada fuente.</em></p>
+            <!-- Respuesta directa con datos reales -->
+            <div class="hero-respuesta">
+                <p><strong>En síntesis:</strong> Ecuador tiene un <strong>EGDI de 0.78</strong> (rank <strong>67</strong> de 193 países, ONU 2024) y se ubica en el grupo de <strong>muy alto desarrollo de gobierno electrónico</strong>. En E-Participation ocupa el <strong>lugar 21</strong> mundial. Usuarios de internet: <strong>65%</strong> (World Bank, último disponible) — INEC reporta <strong>77%</strong> personas que usan internet (Jul 2024). Firma electrónica en sector público: <strong>55.000+</strong> funcionarios (est. 2025).</p>
+            </div>
+            <!-- Barra visual EGDI: entender de un vistazo -->
+            <div class="egdi-visual-block">
+                <p class="egdi-visual-label"><strong>EGDI Ecuador</strong> <span class="egdi-tooltip-trigger" id="egdiTooltipTrigger" aria-label="Explicación del EGDI"><i class="fas fa-info-circle"></i></span></p>
+                <div class="egdi-bar-wrap">
+                    <div class="egdi-bar-fill" id="egdiBarFill" data-value="78" style="width: 0%;"></div>
+                    <span class="egdi-bar-value" id="egdiBarValue">0.78</span>
+                </div>
+                <p class="egdi-bar-caption">78% · Muy alto desarrollo (ONU 2024)</p>
+            </div>
+            <!-- Desplegable: ¿Qué es el EGDI? -->
+            <div class="egdi-explain" id="egdiExplain">
+                <button type="button" class="egdi-explain-btn" id="egdiExplainBtn" aria-expanded="false">
+                    <i class="fas fa-lightbulb"></i> ¿Qué es el EGDI y por qué lo usamos?
+                </button>
+                <div class="egdi-explain-content" id="egdiExplainContent" hidden>
+                    <p>El <strong>EGDI</strong> (E-Government Development Index) es el <strong>Índice de Desarrollo de Gobierno Electrónico</strong> de Naciones Unidas. No es un número inventado: es el estándar internacional para medir qué tan digital es un país en su gestión pública.</p>
+                    <p>Combina tres dimensiones: <strong>servicios en línea</strong> (trámites y portales del Estado), <strong>infraestructura de telecomunicaciones</strong> (internet, móvil) y <strong>capital humano</strong> (educación, uso de TIC). Ecuador con 0.78 está en el grupo de <strong>muy alto desarrollo</strong>.</p>
+                    <p><a href="https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/52-Ecuador" target="_blank" rel="noopener">Ver perfil de Ecuador en la ONU →</a></p>
+                </div>
+            </div>
+            <!-- Resumen en 3 pasos: más entendible -->
+            <div class="hero-resumen-pasos">
+                <h3 class="hero-resumen-pasos-title">Entender en 3 pasos</h3>
+                <div class="hero-pasos-grid">
+                    <div class="hero-paso">
+                        <span class="hero-paso-num">1</span>
+                        <p><strong>Indicador internacional:</strong> EGDI 0.78, rank 67 de 193 países (ONU).</p>
+                    </div>
+                    <div class="hero-paso">
+                        <span class="hero-paso-num">2</span>
+                        <p><strong>Uso real:</strong> 77% personas usan internet (INEC Jul 2024), 55.000+ con firma electrónica –sector público (est. 2025)–, 450+ trámites digitales. Documentos firmados con FirmaEC: 12 M (dato oficial 2020).</p>
+                    </div>
+                    <div class="hero-paso">
+                        <span class="hero-paso-num">3</span>
+                        <p><strong>Contexto:</strong> Leyes, evolución en el tiempo y comparación con otros países más abajo.</p>
+                    </div>
+                </div>
+            </div>
             <div class="hero-stats">
                 <div class="stat-card">
                     <i class="fas fa-percentage"></i>
                     <h3 id="porcentaje-digitalizacion">--%</h3>
-                    <p>Digitalización en Ecuador</p>
+                    <p>EGDI Ecuador (gob. electrónico)</p>
                 </div>
                 <div class="stat-card">
                     <i class="fas fa-signature"></i>
@@ -45,68 +93,207 @@
                     <p>Trámites Digitales</p>
                 </div>
             </div>
+            <!-- Enlace a página de fuentes y a datos de la evaluación -->
+            <div class="sabias-que-card" id="sabiasQueCard">
+                <button type="button" class="sabias-que-btn" id="sabiasQueBtn">
+                    <i class="fas fa-lightbulb"></i> ¿Sabías que...?
+                </button>
+                <p class="sabias-que-text" id="sabiasQueText">Ecuador ocupa el <strong>lugar 21</strong> en E-Participation a nivel mundial (ONU 2024).</p>
+            </div>
+            <div class="fuentes-resumen">
+                <h3><i class="fas fa-book"></i> ¿De dónde salen estos datos?</h3>
+                <p>Puedes ver el listado de datos utilizados, fuentes oficiales y cómo indagar más en una página dedicada, sin amontonar aquí.</p>
+                <div class="fuentes-resumen-buttons">
+                    <a href="datos-evaluacion.html" class="btn-fuente">Ver datos utilizados en la evaluación →</a>
+                    <a href="fuentes.html" class="btn-fuente btn-fuente-secundario">Fuentes y metodología en detalle</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Sección Línea de Tiempo -->
-    <section id="linea-tiempo" class="section">
+    <section id="linea-tiempo" class="section reveal">
         <div class="container">
             <h2 class="section-title">Línea de Tiempo: Evolución del Internet y Leyes en Ecuador</h2>
+            <p class="timeline-intro">Explora los hitos de la digitalización en Ecuador. Haz clic en cualquier evento para ver el detalle.</p>
+            <div class="timeline-controls">
+                <div class="timeline-filters">
+                    <span class="timeline-filters-label">Ver:</span>
+                    <button type="button" class="timeline-filter-btn active" data-filter="all">Todos</button>
+                    <button type="button" class="timeline-filter-btn" data-filter="law"><i class="fas fa-gavel"></i> Leyes</button>
+                    <button type="button" class="timeline-filter-btn" data-filter="internet"><i class="fas fa-globe"></i> Internet</button>
+                </div>
+                <div class="timeline-decades" aria-label="Ir a década">
+                    <span class="timeline-decades-label">Ir a:</span>
+                    <button type="button" class="timeline-decade-btn" data-decade="1990">1990s</button>
+                    <button type="button" class="timeline-decade-btn" data-decade="2000">2000s</button>
+                    <button type="button" class="timeline-decade-btn" data-decade="2010">2010s</button>
+                    <button type="button" class="timeline-decade-btn" data-decade="2020">2020s</button>
+                </div>
+            </div>
             <div class="timeline-container">
+                <div class="timeline-line-progress" id="timelineLineProgress" aria-hidden="true"></div>
                 <div class="timeline" id="timeline"></div>
             </div>
         </div>
     </section>
 
     <!-- Sección Indicadores -->
-    <section id="indicadores" class="section bg-light">
+    <section id="indicadores" class="section bg-light reveal">
         <div class="container">
             <h2 class="section-title">Indicadores de Digitalización</h2>
+            
+            <!-- Indicador principal descubierto en la investigación -->
+            <div class="indicator-highlight">
+                <h3><i class="fas fa-chart-line"></i> Indicador de digitalización descubierto en la investigación</h3>
+                <p><strong>EGDI (E-Government Development Index)</strong> – Índice de Desarrollo de Gobierno Electrónico de Naciones Unidas.</p>
+                <p>Ecuador en 2024: <strong>0.78</strong> (Rank 67 de 193 países). Este indicador mide servicios en línea, infraestructura de telecomunicaciones y capital humano. Fuente: <a href="https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/52-Ecuador" target="_blank" rel="noopener">UN E-Government Survey</a>.</p>
+            </div>
+            
+            <p class="indicators-legend"><i class="fas fa-info-circle"></i> Clic en cualquier indicador para ver fuentes y metodología.</p>
             <div class="indicators-grid">
-                <div class="indicator-card">
-                    <i class="fas fa-signature"></i>
-                    <h3>Firma Electrónica</h3>
-                    <p class="indicator-value" id="ind-firma">Cargando...</p>
-                    <p class="indicator-desc">Personas con firma electrónica en Ecuador</p>
-                </div>
-                <div class="indicator-card">
-                    <i class="fas fa-laptop"></i>
-                    <h3>Trámites Digitales</h3>
-                    <p class="indicator-value" id="ind-tramites">Cargando...</p>
-                    <p class="indicator-desc">Trámites disponibles digitalmente</p>
-                </div>
-                <div class="indicator-card">
-                    <i class="fas fa-shopping-cart"></i>
-                    <h3>Compras Digitales</h3>
-                    <p class="indicator-value" id="ind-compras">Cargando...</p>
-                    <p class="indicator-desc">% de compras realizadas digitalmente</p>
-                </div>
-                <div class="indicator-card">
-                    <i class="fas fa-file-invoice"></i>
-                    <h3>Facturación Electrónica</h3>
-                    <p class="indicator-value" id="ind-facturacion">Cargando...</p>
-                    <p class="indicator-desc">% de empresas con facturación electrónica</p>
-                </div>
-                <div class="indicator-card">
-                    <i class="fas fa-wifi"></i>
-                    <h3>Inversión en Internet</h3>
-                    <p class="indicator-value" id="ind-inversion">Cargando...</p>
-                    <p class="indicator-desc">Inversión en infraestructura de internet</p>
-                </div>
-                <div class="indicator-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Gasto en Tecnología</h3>
-                    <p class="indicator-value" id="ind-gasto-tech">Cargando...</p>
-                    <p class="indicator-desc">% de bonos destinados a tecnología</p>
-                </div>
+                <a href="fuentes.html#fuente-firma-electronica" class="indicator-card-link" title="Ver fuentes: Firma electrónica">
+                    <div class="indicator-card">
+                        <i class="fas fa-signature"></i>
+                        <h3>Firma Electrónica</h3>
+                        <p class="indicator-value" id="ind-firma">Cargando...</p>
+                        <p class="indicator-desc">Funcionarios públicos con firma electrónica (FirmaEC). Oficial 2020: 32.000; est. 2025: 55.000+</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-tramites-digitales" class="indicator-card-link" title="Ver fuentes: Trámites digitales">
+                    <div class="indicator-card">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Trámites Digitales</h3>
+                        <p class="indicator-value" id="ind-tramites">Cargando...</p>
+                        <p class="indicator-desc">Trámites disponibles digitalmente. Entidades públicas con trámites en línea.</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-cuan-digitales-somos" class="indicator-card-link" title="Ver fuentes: Usuarios de internet">
+                    <div class="indicator-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Usuarios de Internet</h3>
+                        <p class="indicator-value" id="ind-usuarios-internet">Cargando...</p>
+                        <p class="indicator-desc">% población · World Bank 2022</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-facturacion-electronica" class="indicator-card-link" title="Ver fuentes: Facturación electrónica">
+                    <div class="indicator-card">
+                        <i class="fas fa-file-invoice"></i>
+                        <h3>Facturación Electrónica</h3>
+                        <p class="indicator-value" id="ind-facturacion">Cargando...</p>
+                        <p class="indicator-desc">% empresas grandes (referencia SRI)</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-indicador-egdi" class="indicator-card-link" title="Ver fuentes: EGDI e indicadores">
+                    <div class="indicator-card">
+                        <i class="fas fa-wifi"></i>
+                        <h3>Banda Ancha Fija</h3>
+                        <p class="indicator-value" id="ind-banda-ancha">Cargando...</p>
+                        <p class="indicator-desc">Suscripciones por 100 hab. · World Bank 2022</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-indicador-egdi" class="indicator-card-link" title="Ver fuentes: EGDI e indicadores">
+                    <div class="indicator-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Suscripciones Móviles</h3>
+                        <p class="indicator-value" id="ind-movil">Cargando...</p>
+                        <p class="indicator-desc">Por 100 hab. · World Bank 2022</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-e-participation" class="indicator-card-link" title="Ver fuentes: E-Participation">
+                    <div class="indicator-card">
+                        <i class="fas fa-users"></i>
+                        <h3>E-Participation (rank)</h3>
+                        <p class="indicator-value" id="ind-eparticipation">Cargando...</p>
+                        <p class="indicator-desc">Participación en línea con gobierno · UN 2024</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-leyes-tic" class="indicator-card-link" title="Ver fuentes: Leyes TIC">
+                    <div class="indicator-card">
+                        <i class="fas fa-gavel"></i>
+                        <h3>Leyes sobre TIC / digitalización</h3>
+                        <p class="indicator-value" id="ind-leyes-tic">Cargando...</p>
+                        <p class="indicator-desc">Conteo desde Registro Oficial (proyecto)</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-hogares-internet" class="indicator-card-link" title="Ver fuentes: Hogares con internet">
+                    <div class="indicator-card">
+                        <i class="fas fa-home"></i>
+                        <h3>Hogares con internet</h3>
+                        <p class="indicator-value" id="ind-hogares-internet">Cargando...</p>
+                        <p class="indicator-desc">% hogares · INEC ENTIC (ecuadorencifras.gob.ec)</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-comercio-electronico" class="indicator-card-link" title="Ver fuentes: Comercio electrónico">
+                    <div class="indicator-card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Comercio electrónico</h3>
+                        <p class="indicator-value" id="ind-comercio-electronico">Cargando...</p>
+                        <p class="indicator-desc">Adultos que compran por internet · CECE / reportes 2024</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-pagos-digitales" class="indicator-card-link" title="Ver fuentes: Pagos digitales">
+                    <div class="indicator-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Pagos digitales</h3>
+                        <p class="indicator-value" id="ind-pagos-digitales">Cargando...</p>
+                        <p class="indicator-desc">Transacciones digitales 2024 · BCE / sistema de pagos</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+                <a href="fuentes.html#fuente-datos-abiertos" class="indicator-card-link" title="Ver fuentes: Datos abiertos">
+                    <div class="indicator-card">
+                        <i class="fas fa-database"></i>
+                        <h3>Datos abiertos</h3>
+                        <p class="indicator-value" id="ind-datos-abiertos">Cargando...</p>
+                        <p class="indicator-desc">Conjuntos de datos públicos · datosabiertos.gob.ec</p>
+                        <span class="indicator-card-ver">Ver fuente →</span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Entidades públicas con trámites digitales -->
+            <div class="entidades-tramites">
+                <h3><i class="fas fa-building"></i> Entidades públicas que tienen trámites digitales</h3>
+                <p>Instituciones del Estado que ofrecen trámites en línea (portal único: <a href="https://www.gobiernoelectronico.gob.ec/" target="_blank" rel="noopener">gobiernoelectronico.gob.ec</a> y portales por institución):</p>
+                <ul id="entidades-list">
+                    <li>Registro Civil – cedulación, certificados</li>
+                    <li>SRI – declaraciones, facturación electrónica</li>
+                    <li>IESS – afiliación, pensiones, certificados</li>
+                    <li>Ministerio de Salud – permisos, licencias</li>
+                    <li>Ministerio de Educación – títulos, certificados</li>
+                    <li>Ministerio de Trabajo – contratos, permisos</li>
+                    <li>ANT – licencias, matrículas vehiculares</li>
+                    <li>Secretaría General de la Administración Pública – trámites unificados</li>
+                    <li>Gobiernos autónomos descentralizados (GAD) – trámites municipales</li>
+                </ul>
+                <p class="entidades-note">Cantidad total de trámites digitales disponibles: <strong id="total-tramites-display">450+</strong> (según datos de portales gubernamentales).</p>
             </div>
         </div>
     </section>
 
     <!-- Sección Comparación -->
-    <section id="comparacion" class="section">
+    <section id="comparacion" class="section reveal">
         <div class="container">
             <h2 class="section-title">Comparación Internacional</h2>
+            <p class="comparison-subtitle">Usuarios de internet (% de la población) · World Bank 2022</p>
+            <div class="comparison-ranking" id="comparisonRanking">
+                <h3 class="comparison-ranking-title"><i class="fas fa-trophy"></i> ¿Cuál es el más digitalizado?</h3>
+                <p class="comparison-ranking-text" id="comparisonRankingText">Entre los países comparados, el que tiene mayor porcentaje de población usuaria de internet es <strong id="rank1-country">—</strong> (<span id="rank1-pct">—</span>), seguido de <span id="rank-rest">—</span>. Ecuador destaca en <strong>gobierno electrónico</strong> (EGDI 78%, rank 67 mundial) pero tiene menor penetración de internet que varios de estos países.</p>
+                <div class="comparison-ranking-badges" id="comparisonRankingBadges">
+                    <!-- Se rellena con JS: 1° USA, 2° Chile, … -->
+                </div>
+            </div>
             <div class="comparison-container">
                 <div class="comparison-chart">
                     <canvas id="comparisonChart"></canvas>
@@ -116,14 +303,14 @@
                         <thead>
                             <tr>
                                 <th>País</th>
-                                <th>% Digitalización</th>
+                                <th>% Usuarios internet</th>
                                 <th>Número de Leyes</th>
                                 <th>Firmas Electrónicas</th>
                                 <th>Trámites Digitales</th>
                             </tr>
                         </thead>
                         <tbody id="comparisonTableBody">
-                            <tr>
+                            <tr class="comparison-row-ecuador">
                                 <td>🇪🇨 Ecuador</td>
                                 <td id="ec-digitalizacion">--</td>
                                 <td id="ec-leyes">--</td>
@@ -152,6 +339,13 @@
                                 <td id="mx-tramites">--</td>
                             </tr>
                             <tr>
+                                <td>🇵🇪 Perú</td>
+                                <td id="pe-digitalizacion">--</td>
+                                <td id="pe-leyes">--</td>
+                                <td id="pe-firmas">--</td>
+                                <td id="pe-tramites">--</td>
+                            </tr>
+                            <tr>
                                 <td>🇺🇸 USA</td>
                                 <td id="us-digitalizacion">--</td>
                                 <td id="us-leyes">--</td>
@@ -166,7 +360,7 @@
     </section>
 
     <!-- Sección Leyes -->
-    <section id="leyes" class="section bg-light">
+    <section id="leyes" class="section bg-light reveal">
         <div class="container">
             <h2 class="section-title">Análisis de Leyes de Digitalización</h2>
             <div class="laws-container" id="lawsContainer"></div>
@@ -176,12 +370,36 @@
     <!-- Sección Datos por Edades y Productos -->
     <section id="datos" class="section">
         <div class="container">
-            <h2 class="section-title">Datos por Edades y Productos</h2>
+            <h2 class="section-title">Datos de TIC y uso digital</h2>
+            <p class="datos-referencia-nota">La primera pestaña muestra <strong>datos reales del INEC</strong> (Indicadores TIC, ENEMDU). Las pestañas Por Edades y Por Productos son de <strong>referencia/tendencia</strong>; el INEC publica desagregación por edad en los tabulados Excel/CSV.</p>
             <div class="data-tabs">
-                <button class="tab-button active" data-tab="edades">Por Edades</button>
-                <button class="tab-button" data-tab="productos">Por Productos</button>
+                <button class="tab-button active" data-tab="inec">Datos reales INEC</button>
+                <button class="tab-button" data-tab="edades">Por Edades (ref.)</button>
+                <button class="tab-button" data-tab="productos">Por Productos (ref.)</button>
             </div>
-            <div class="tab-content active" id="edades-tab">
+            <div class="tab-content active" id="inec-tab">
+                <p class="datos-inec-fuente"><i class="fas fa-database"></i> Fuente: <a href="https://www.ecuadorencifras.gob.ec/tecnologias-de-la-informacion-y-comunicacion-tic/" target="_blank" rel="noopener">INEC – Tecnologías de la Información y Comunicación (TIC)</a>, resultados julio 2022 a julio 2025.</p>
+                <div class="chart-container">
+                    <canvas id="inecChart"></canvas>
+                </div>
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Periodo</th>
+                                <th>Hogares con internet (%)</th>
+                                <th>Personas que usan internet (%)</th>
+                                <th>Teléfono inteligente (%)</th>
+                                <th>Analfabetismo digital (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inecTableBody">
+                            <!-- Se llenará con datos reales INEC -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-content" id="edades-tab">
                 <div class="chart-container">
                     <canvas id="edadesChart"></canvas>
                 </div>
@@ -251,17 +469,33 @@
                     <p id="modalImpacto"></p>
                 </div>
                 <div class="modal-section">
-                    <h4><i class="fas fa-check-circle"></i> Casos Resueltos</h4>
+                    <h4><i class="fas fa-check-circle"></i> ¿Qué se solucionó?</h4>
                     <p id="modalCasos"></p>
+                </div>
+                <div class="modal-section" id="modalSectionFuente">
+                    <h4><i class="fas fa-book-open"></i> ¿Dónde se obtuvo / verificó?</h4>
+                    <p id="modalFuente"></p>
+                </div>
+                <div class="modal-section" id="modalSectionQueReviso">
+                    <h4><i class="fas fa-search"></i> ¿Qué se revisó?</h4>
+                    <p id="modalQueReviso"></p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Enlace a página Fuentes -->
+    <section class="section bg-light">
+        <div class="container text-center">
+            <p class="section-intro">Toda la información sobre <strong>fuentes, datos utilizados y metodología</strong> está en una página aparte para que puedas consultarla con calma.</p>
+            <a href="fuentes.html" class="btn-fuente">Ir a Fuentes y metodología →</a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Proyecto Final - Digitalización en Ecuador</p>
+            <p>&copy; 2026 Proyecto Final - Digitalización en Ecuador</p>
             <p>Fuentes de datos: Ministerios, SRI, Comercio Exterior, Estadísticas Nacionales</p>
         </div>
     </footer>

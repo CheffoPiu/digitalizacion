@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos utilizados en la evaluación - Digitalización Ecuador</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🇪🇨 Digitalización Ecuador</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#linea-tiempo" class="nav-link">Línea de Tiempo</a></li>
+                <li><a href="index.html#indicadores" class="nav-link">Indicadores</a></li>
+                <li><a href="index.html#comparacion" class="nav-link">Comparación</a></li>
+                <li><a href="index.html#leyes" class="nav-link">Leyes</a></li>
+                <li><a href="index.html#datos" class="nav-link">Datos</a></li>
+                <li><a href="fuentes.html" class="nav-link">Fuentes</a></li>
+                <li><a href="datos-evaluacion.html" class="nav-link nav-link-active">Datos evaluación</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section hero-fuentes">
+        <div class="container">
+            <h1><i class="fas fa-table"></i> Datos utilizados en la evaluación</h1>
+            <p class="hero-fuentes-intro">En esta página se listan los <strong>datos concretos</strong> que usa este proyecto para responder «¿Cuán digitales somos?»: valores, fuentes y cómo se obtuvieron. Todo está vinculado a <a href="fuentes.html">Fuentes y metodología</a> para el detalle por tema.</p>
+            <div class="hero-datos-eval-links">
+                <a href="fuentes.html" class="btn-fuente btn-fuente-secundario"><i class="fas fa-book"></i> Fuentes y metodología</a>
+                <a href="index.html" class="btn-fuente btn-fuente-secundario"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-list-ol"></i> Indicadores (Ecuador)</h2>
+            <p class="datos-eval-intro">Valores que alimentan la sección de indicadores y el hero. Fuente y nota en la columna «Origen / nota».</p>
+            <div class="tabla-datos-eval-wrapper">
+                <table class="tabla-datos-eval" id="tabla-indicadores">
+                    <thead>
+                        <tr>
+                            <th>Indicador</th>
+                            <th>Valor</th>
+                            <th>Origen / nota</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-globe-americas"></i> Comparación internacional</h2>
+            <p class="datos-eval-intro">Datos por país que alimentan el gráfico y la tabla de comparación. Usuarios de internet (% población) · World Bank 2022; Ecuador además EGDI 78% (UN 2024) en el hero.</p>
+            <div class="tabla-datos-eval-wrapper">
+                <table class="tabla-datos-eval" id="tabla-comparacion">
+                    <thead>
+                        <tr>
+                            <th>País</th>
+                            <th>% Usuarios internet</th>
+                            <th>Leyes (ref.)</th>
+                            <th>Firmas (ref.)</th>
+                            <th>Trámites (ref.)</th>
+                            <th>Fuente</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-key"></i> Cifras clave (resumen)</h2>
+            <p class="datos-eval-intro">Resumen de las cifras que se destacan en la página de fuentes (2024-2026).</p>
+            <div class="tabla-datos-eval-wrapper">
+                <table class="tabla-datos-eval" id="tabla-cifras-clave">
+                    <thead>
+                        <tr>
+                            <th>Valor</th>
+                            <th>Etiqueta</th>
+                            <th>Fuente</th>
+                            <th>Año</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="como-se-obtuvieron">
+                <h2><i class="fas fa-tools"></i> Cómo se obtuvieron estos datos</h2>
+                <ul>
+                    <li><strong>EGDI y E-Participation (Ecuador):</strong> Consulta directa al sitio de Naciones Unidas (<a href="https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/52-Ecuador" target="_blank" rel="noopener">UN E-Government Knowledge Base</a>). Los valores se incorporaron al proyecto en <code>data/un_egov_ecuador.json</code> y en <code>js/data.js</code>. Scripts opcionales en <code>scripts/</code> (scraper_un_egov_*.py, integrar_un_egov.py) para actualizar.</li>
+                    <li><strong>Usuarios de internet y telecomunicaciones (World Bank):</strong> Datos del World Bank Open Data (indicadores IT.NET.USER.ZS, banda ancha, móviles). Se usan los valores ya integrados en <code>data/world_bank_data_reales.json</code>. Script <code>scripts/obtener_datos_reales.py</code> e <code>integrar_datos_reales.py</code> para refrescar.</li>
+                    <li><strong>Firma electrónica, trámites, facturación:</strong> Cifras de referencia a partir de portales (gobiernoelectronico.gob.ec, ARCOTEL, SRI). Para datos oficiales actualizados: solicitar vía Ley de Transparencia o reportes oficiales.</li>
+                    <li><strong>Línea de tiempo y leyes:</strong> Fechas y nombres verificados en Registro Oficial y documentos públicos; los textos explicativos se basan en los marcos legales y contexto conocido.</li>
+                </ul>
+                <p><strong>Documentación en el proyecto:</strong> <a href="docs/ACLARACION_DATOS.md">ACLARACION_DATOS.md</a> (qué es real y qué referencia), <a href="docs/APIS_Y_FUENTES.md">APIS_Y_FUENTES.md</a> (APIs y fuentes), <a href="docs/DATOS_ACTUALES_2025_2026.md">DATOS_ACTUALES_2025_2026.md</a> (datos más recientes). Scripts en <code>scripts/</code> con README en <code>scripts/README_SCRIPTS.md</code> y <code>scripts/README_SCRAPERS.md</code>.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Proyecto Final - Digitalización en Ecuador</p>
+            <p><a href="index.html" style="color: rgba(255,255,255,0.9);">Volver al inicio</a> · <a href="fuentes.html" style="color: rgba(255,255,255,0.9);">Fuentes y metodología</a></p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script>
+        (function() {
+            if (typeof indicatorsData === 'undefined') return;
+
+            var indicadorLabels = {
+                firmaElectronica: 'Firma electrónica',
+                tramitesDigitales: 'Trámites digitales',
+                usuariosInternet: 'Usuarios de internet',
+                facturacionElectronica: 'Facturación electrónica',
+                bandaAncha: 'Banda ancha fija',
+                movil: 'Suscripciones móviles',
+                eParticipation: 'E-Participation (rank)',
+                leyesTIC: 'Leyes sobre TIC / digitalización',
+                hogaresInternet: 'Hogares con internet',
+                comercioElectronico: 'Comercio electrónico',
+                pagosDigitales: 'Pagos digitales',
+                datosAbiertos: 'Datos abiertos'
+            };
+
+            var tbody = document.querySelector('#tabla-indicadores tbody');
+            if (tbody) {
+                Object.keys(indicatorsData).forEach(function(key) {
+                    var d = indicatorsData[key];
+                    var valor = d.value + (d.unit ? ' ' + d.unit : '');
+                    var tr = document.createElement('tr');
+                    tr.innerHTML = '<td>' + (indicadorLabels[key] || key) + '</td><td><strong>' + valor + '</strong></td><td>' + (d.description || '—') + '</td>';
+                    tbody.appendChild(tr);
+                });
+            }
+
+            if (typeof comparisonData !== 'undefined') {
+                var countries = [
+                    { key: 'ecuador', label: 'Ecuador' },
+                    { key: 'china', label: 'China' },
+                    { key: 'chile', label: 'Chile' },
+                    { key: 'mexico', label: 'México' },
+                    { key: 'peru', label: 'Perú' },
+                    { key: 'usa', label: 'USA' }
+                ];
+                var tbComp = document.querySelector('#tabla-comparacion tbody');
+                if (tbComp) {
+                    countries.forEach(function(c) {
+                        var d = comparisonData[c.key];
+                        var fuente = c.key === 'ecuador' ? 'WB 2022 (usuarios internet); UN 2024 (EGDI hero)' : 'World Bank 2022';
+                        var tr = document.createElement('tr');
+                        tr.innerHTML = '<td>' + c.label + '</td><td><strong>' + d.digitalizacion + '</strong></td><td>' + d.leyes + '</td><td>' + d.firmas + '</td><td>' + d.tramites + '</td><td>' + fuente + '</td>';
+                        tbComp.appendChild(tr);
+                    });
+                }
+            }
+
+            if (typeof datosActualesCifras !== 'undefined') {
+                var tbCifras = document.querySelector('#tabla-cifras-clave tbody');
+                if (tbCifras) {
+                    datosActualesCifras.forEach(function(c) {
+                        var tr = document.createElement('tr');
+                        tr.innerHTML = '<td><strong>' + c.valor + '</strong></td><td>' + c.etiqueta + '</td><td>' + c.fuente + '</td><td>' + c.anio + '</td>';
+                        tbCifras.appendChild(tr);
+                    });
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
