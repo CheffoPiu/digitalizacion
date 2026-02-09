@@ -29,6 +29,7 @@
             <h1><i class="fas fa-table"></i> Datos utilizados en la evaluación</h1>
             <p class="hero-fuentes-intro">En esta página se listan los <strong>datos concretos</strong> que usa este proyecto para responder «¿Cuán digitales somos?»: valores, fuentes y cómo se obtuvieron. Todo está vinculado a <a href="fuentes.html">Fuentes y metodología</a> para el detalle por tema.</p>
             <div class="hero-datos-eval-links">
+                <a href="#datos-crudos" class="btn-fuente btn-fuente-secundario"><i class="fas fa-database"></i> Datos crudos y enlaces</a>
                 <a href="fuentes.html" class="btn-fuente btn-fuente-secundario"><i class="fas fa-book"></i> Fuentes y metodología</a>
                 <a href="index.html" class="btn-fuente btn-fuente-secundario"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
             </div>
@@ -37,8 +38,46 @@
 
     <section class="section bg-light">
         <div class="container">
+            <h2 id="datos-crudos" class="section-title"><i class="fas fa-database"></i> Datos crudos y enlaces</h2>
+            <p class="datos-eval-intro">Enlaces a la <strong>data pura</strong> del proyecto (JSON), a <strong>fuentes oficiales</strong> y a <strong>documentación</strong> (artículos, indicadores, metodología).</p>
+            <div class="datos-crudos-grid">
+                <div class="datos-crudos-card">
+                    <h3><i class="fas fa-file-code"></i> Data del proyecto (JSON)</h3>
+                    <ul class="datos-crudos-lista">
+                        <li><a href="data/un_egov_ecuador.json" target="_blank" rel="noopener">un_egov_ecuador.json</a> – EGDI, E-Participation (UN)</li>
+                        <li><a href="data/indicadores_un_egov.json" target="_blank" rel="noopener">indicadores_un_egov.json</a> – Indicadores UN E-Government</li>
+                        <li><a href="data/world_bank_data.json" target="_blank" rel="noopener">world_bank_data.json</a> – World Bank (usuarios internet, etc.)</li>
+                        <li><a href="data/world_bank_data_reales.json" target="_blank" rel="noopener">world_bank_data_reales.json</a> – World Bank datos reales</li>
+                        <li><a href="data/ecuador_especifico.json" target="_blank" rel="noopener">ecuador_especifico.json</a> – Datos Ecuador</li>
+                        <li><a href="data/datos_integrados.json" target="_blank" rel="noopener">datos_integrados.json</a> – Datos integrados</li>
+                    </ul>
+                </div>
+                <div class="datos-crudos-card">
+                    <h3><i class="fas fa-external-link-alt"></i> Fuentes oficiales (externas)</h3>
+                    <ul class="datos-crudos-lista">
+                        <li><a href="https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/52-Ecuador" target="_blank" rel="noopener">UN E-Government – Ecuador</a></li>
+                        <li><a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS" target="_blank" rel="noopener">World Bank – Usuarios internet</a></li>
+                        <li><a href="https://www.ecuadorencifras.gob.ec/tecnologias-de-la-informacion-y-comunicacion-tic/" target="_blank" rel="noopener">INEC – TIC Ecuador</a></li>
+                        <li><a href="https://www.telecomunicaciones.gob.ec/firma-electronica-12-millones-de-documentos-firmados-en-menos-de-2-anos-solo-entre-enero-y-abril-de-2020-hubo-us-5-millones-de-ahorro/" target="_blank" rel="noopener">MINTEL – Firma electrónica</a></li>
+                        <li><a href="https://www.gobiernoelectronico.gob.ec/" target="_blank" rel="noopener">Gobierno Electrónico Ecuador</a></li>
+                        <li><a href="https://www.gobiernoelectronico.gob.ec/normativa/" target="_blank" rel="noopener">Normativa – Gobierno Electrónico</a></li>
+                        <li><a href="https://www.datosabiertos.gob.ec/" target="_blank" rel="noopener">Datos Abiertos Ecuador</a></li>
+                    </ul>
+                </div>
+                <div class="datos-crudos-card">
+                    <h3><i class="fas fa-file-alt"></i> Documentación y artículos</h3>
+                    <ul class="datos-crudos-lista">
+                        <li><a href="fuentes.html">Fuentes y metodología</a> – Detalle por indicador</li>
+                        <li><a href="docs/CONSTITUCION_ART_16_17_18.md">Constitución Art. 16, 17, 18</a> – Derechos digitales</li>
+                        <li><a href="docs/ACLARACION_DATOS.md">ACLARACION_DATOS.md</a> – Qué es real y qué referencia</li>
+                        <li><a href="docs/APIS_Y_FUENTES.md">APIS_Y_FUENTES.md</a> – APIs y fuentes</li>
+                        <li><a href="docs/DATOS_ACTUALES_2025_2026.md">DATOS_ACTUALES_2025_2026.md</a> – Datos recientes</li>
+                    </ul>
+                </div>
+            </div>
+
             <h2 class="section-title"><i class="fas fa-list-ol"></i> Indicadores (Ecuador)</h2>
-            <p class="datos-eval-intro">Valores que alimentan la sección de indicadores y el hero. Fuente y nota en la columna «Origen / nota».</p>
+            <p class="datos-eval-intro">Valores que alimentan la sección de indicadores y el hero. En «Enlace»: ficha en Fuentes y/o fuente oficial.</p>
             <div class="tabla-datos-eval-wrapper">
                 <table class="tabla-datos-eval" id="tabla-indicadores">
                     <thead>
@@ -46,6 +85,7 @@
                             <th>Indicador</th>
                             <th>Valor</th>
                             <th>Origen / nota</th>
+                            <th>Enlace</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -63,7 +103,7 @@
                             <th>Leyes (ref.)</th>
                             <th>Firmas (ref.)</th>
                             <th>Trámites (ref.)</th>
-                            <th>Fuente</th>
+                            <th>Fuente / Enlace</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -126,13 +166,36 @@
                 datosAbiertos: 'Datos abiertos'
             };
 
+            var keyToFuenteId = {
+                firmaElectronica: 'fuente-firma-electronica',
+                tramitesDigitales: 'fuente-tramites-digitales',
+                usuariosInternet: 'fuente-cuan-digitales-somos',
+                facturacionElectronica: 'fuente-facturacion-electronica',
+                bandaAncha: 'fuente-indicador-egdi',
+                movil: 'fuente-indicador-egdi',
+                eParticipation: 'fuente-e-participation',
+                leyesTIC: 'fuente-leyes-tic',
+                hogaresInternet: 'fuente-hogares-internet',
+                comercioElectronico: 'fuente-comercio-electronico',
+                pagosDigitales: 'fuente-pagos-digitales',
+                datosAbiertos: 'fuente-datos-abiertos'
+            };
             var tbody = document.querySelector('#tabla-indicadores tbody');
             if (tbody) {
                 Object.keys(indicatorsData).forEach(function(key) {
                     var d = indicatorsData[key];
                     var valor = d.value + (d.unit ? ' ' + d.unit : '');
+                    var f = typeof fuentesYMetodologia !== 'undefined' ? fuentesYMetodologia[key] : null;
+                    var enlace = '';
+                    if (keyToFuenteId[key]) {
+                        enlace += '<a href="fuentes.html#' + keyToFuenteId[key] + '" class="link-fuente-tabla">Ficha</a>';
+                        if (f && f.urlFuente) {
+                            enlace += ' · <a href="' + f.urlFuente + '" target="_blank" rel="noopener" class="link-fuente-tabla">Fuente oficial</a>';
+                        }
+                    }
+                    if (!enlace) enlace = '—';
                     var tr = document.createElement('tr');
-                    tr.innerHTML = '<td>' + (indicadorLabels[key] || key) + '</td><td><strong>' + valor + '</strong></td><td>' + (d.description || '—') + '</td>';
+                    tr.innerHTML = '<td>' + (indicadorLabels[key] || key) + '</td><td><strong>' + valor + '</strong></td><td>' + (d.description || '—') + '</td><td class="td-enlace">' + enlace + '</td>';
                     tbody.appendChild(tr);
                 });
             }
@@ -151,8 +214,11 @@
                     countries.forEach(function(c) {
                         var d = comparisonData[c.key];
                         var fuente = c.key === 'ecuador' ? 'WB 2022 (usuarios internet); UN 2024 (EGDI hero)' : 'World Bank 2022';
+                        var link = c.key === 'ecuador'
+                            ? '<a href="fuentes.html#fuente-cuan-digitales-somos" class="link-fuente-tabla">Ficha</a> · <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS" target="_blank" rel="noopener" class="link-fuente-tabla">World Bank</a> · <a href="https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/52-Ecuador" target="_blank" rel="noopener" class="link-fuente-tabla">UN EGDI</a>'
+                            : '<a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS" target="_blank" rel="noopener" class="link-fuente-tabla">World Bank</a>';
                         var tr = document.createElement('tr');
-                        tr.innerHTML = '<td>' + c.label + '</td><td><strong>' + d.digitalizacion + '</strong></td><td>' + d.leyes + '</td><td>' + d.firmas + '</td><td>' + d.tramites + '</td><td>' + fuente + '</td>';
+                        tr.innerHTML = '<td>' + c.label + '</td><td><strong>' + d.digitalizacion + '</strong></td><td>' + d.leyes + '</td><td>' + d.firmas + '</td><td>' + d.tramites + '</td><td class="td-enlace">' + link + '</td>';
                         tbComp.appendChild(tr);
                     });
                 }

@@ -1470,6 +1470,74 @@ body {
     font-size: 0.85em;
 }
 
+/* Datos crudos y enlaces - datos-evaluacion */
+.datos-crudos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.datos-crudos-card {
+    background: var(--bg-white);
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.datos-crudos-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.datos-crudos-card h3 i {
+    color: var(--secondary-color);
+}
+
+.datos-crudos-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.datos-crudos-lista li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+
+.datos-crudos-lista li:last-child {
+    border-bottom: none;
+}
+
+.datos-crudos-lista a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.datos-crudos-lista a:hover {
+    text-decoration: underline;
+}
+
+.tabla-datos-eval .td-enlace {
+    white-space: nowrap;
+}
+
+.link-fuente-tabla {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.link-fuente-tabla:hover {
+    text-decoration: underline;
+}
+
 .como-se-obtuvieron {
     margin-top: 2.5rem;
     padding: 1.5rem;
