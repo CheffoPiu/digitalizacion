@@ -241,9 +241,23 @@ function openTimelineModal(item) {
         document.getElementById('modalCasos').textContent = item.details.casosResueltos || 'Información no disponible';
         var fuente = item.details.fuenteVerificacion || '';
         var queReviso = item.details.queSeReviso || '';
-        document.getElementById('modalFuente').textContent = fuente || '—';
+        var urlFuente = item.details.urlFuente || '';
+        var urlFuenteLabel = item.details.urlFuenteLabel || 'Ver texto de la ley';
+        var urlFuentePdf = item.details.urlFuentePdf || '';
+        var urlFuentePdfLabel = item.details.urlFuentePdfLabel || 'Descargar PDF';
+        if (urlFuente || urlFuentePdf) {
+            var links = [];
+            if (urlFuente) links.push('<a href="' + urlFuente + '" target="_blank" rel="noopener" class="modal-fuente-link">' + urlFuenteLabel + ' →</a>');
+            if (urlFuentePdf) links.push('<a href="' + urlFuentePdf + '" target="_blank" rel="noopener" class="modal-fuente-link">' + urlFuentePdfLabel + ' →</a>');
+            var linkHtml = (fuente ? fuente + ' ' : '') + links.join(' ');
+            document.getElementById('modalFuente').innerHTML = linkHtml;
+        } else {
+            document.getElementById('modalFuente').textContent = fuente || '—';
+        }
         document.getElementById('modalQueReviso').textContent = queReviso || '—';
-        document.getElementById('modalSectionFuente').style.display = (fuente || queReviso) ? 'block' : 'none';
+        var enlaceWrap = document.getElementById('modalEnlaceWrap');
+        if (enlaceWrap) enlaceWrap.style.display = urlFuente ? 'none' : 'none';
+        document.getElementById('modalSectionFuente').style.display = (fuente || queReviso || urlFuente) ? 'block' : 'none';
         document.getElementById('modalSectionQueReviso').style.display = queReviso ? 'block' : 'none';
     } else {
         // Si no hay detalles, mostrar la descripción básica
@@ -471,6 +485,7 @@ function initializeLaws() {
                 <h4>¿Por qué surge esta ley?</h4>
                 <p>${law.reason}</p>
                 ${law.cases ? `<p><strong>Casos relevantes:</strong> ${law.cases}</p>` : ''}
+                ${law.url || law.urlPdf ? `<p>${law.url ? `<a href="${law.url}" target="_blank" rel="noopener" class="law-link"><i class="fas fa-external-link-alt"></i> Ver texto de la ley</a>` : ''}${law.url && law.urlPdf ? ' · ' : ''}${law.urlPdf ? `<a href="${law.urlPdf}" target="_blank" rel="noopener" class="law-link"><i class="fas fa-file-pdf"></i> Descargar PDF</a>` : ''}</p>` : ''}
             </div>
         `;
         

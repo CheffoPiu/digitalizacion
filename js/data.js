@@ -163,6 +163,27 @@ const timelineData = [
         }
     },
     {
+        year: 2016,
+        title: "Código Ingenios – Código Orgánico de la Economía Social de los Conocimientos, la Creatividad e Innovación",
+        description: "Código orgánico (2016) que regula conocimiento, ciencia y tecnología, innovación, propiedad intelectual, educación superior e investigación. Nombre común: Código Ingenios.",
+        type: "law",
+        law: "Código Ingenios (COESC+i)",
+        reason: "\"Ingenios\" es solo un nombre político/técnico, no el nombre de una ley autónoma. Regula la economía social del conocimiento y la innovación.",
+        details: {
+            quePaso: "Se aprueba el Código Orgánico de la Economía Social de los Conocimientos, la Creatividad e Innovación (nombre común: Código Ingenios). Es un código orgánico, no una ley simple. Regula conocimiento, ciencia y tecnología, innovación, propiedad intelectual, educación superior e investigación.",
+            porQue: "Ecuador necesitaba un marco legal moderno para la economía del conocimiento, la investigación, la propiedad intelectual y la innovación. El código articula sistemas de educación, cultura, ciencia y tecnología.",
+            contexto: "Publicado en Registro Oficial 899 del 9 de diciembre de 2016. Listado en gobiernoelectronico.gob.ec/normativa (Evaluación de proyectos TIC).",
+            impacto: "Estableció el marco para ciencia, tecnología, innovación, propiedad intelectual y derechos de autor. Relevante para software, patentes, universidades e industria cultural.",
+            casosResueltos: "Marco legal para investigación, innovación, propiedad intelectual y economía del conocimiento.",
+            fuenteVerificacion: "Registro Oficial 899 (9 dic 2016); gob.ec/regulaciones; derechosintelectuales.gob.ec (Código Ingenios).",
+            queSeReviso: "Texto en gob.ec/regulaciones/codigo-organico-economia-social-conocimientos-creatividad-innovacion; SENADI/derechosintelectuales.gob.ec.",
+            urlFuente: "https://www.gob.ec/regulaciones/codigo-organico-economia-social-conocimientos-creatividad-innovacion",
+            urlFuenteLabel: "Ver texto del Código Ingenios (gob.ec)",
+            urlFuentePdf: "https://www.gobiernoelectronico.gob.ec/wp-content/uploads/2018/10/Codigo-Organico-de-la-Economia-Social-de-los-Conocimientos-Creatividad-e-Innovacion.pdf",
+            urlFuentePdfLabel: "Descargar PDF (gobiernoelectronico.gob.ec)"
+        }
+    },
+    {
         year: 2017,
         title: "Ley Orgánica de Economía Popular y Solidaria",
         description: "Incluye disposiciones sobre comercio electrónico y digitalización de procesos.",
@@ -180,19 +201,19 @@ const timelineData = [
     },
     {
         year: 2018,
-        title: "Ley de Ingenios (Reforma)",
-        description: "Reforma a la Ley de Ingenios que incluye disposiciones sobre digitalización y tecnología en el sector azucarero.",
+        title: "LOOETA – Ley Orgánica para la Optimización y Eficiencia de Trámites Administrativos",
+        description: "Ley que optimiza trámites administrativos, establece interoperabilidad y medios electrónicos en la Administración.",
         type: "law",
-        law: "Ley de Ingenios (Reforma)",
-        reason: "Modernización del sector azucarero incluyendo procesos digitales para mejorar la eficiencia y transparencia.",
+        law: "LOOETA",
+        reason: "Facilitar la relación entre ciudadanía y Administración; derecho a información y trámites por medios electrónicos.",
         details: {
-            quePaso: "Se reforma la Ley de Ingenios para incluir disposiciones sobre digitalización de procesos en el sector azucarero. Se establecen obligaciones de uso de tecnología para registro, control y trazabilidad de la producción azucarera.",
-            porQue: "El sector azucarero tenía procesos manuales y falta de transparencia. Había problemas de control de producción, evasión, y falta de trazabilidad. La digitalización buscaba modernizar y transparentar el sector.",
-            contexto: "El gobierno buscaba modernizar sectores tradicionales de la economía. El sector azucarero era importante pero necesitaba actualización tecnológica para mejorar eficiencia y control.",
-            impacto: "Mejoró la trazabilidad de la producción azucarera, facilitó el control fiscal, aumentó la transparencia en el sector, y modernizó procesos administrativos de los ingenios.",
-            casosResueltos: "Resolvió problemas de falta de control en la producción azucarera, evasión fiscal en el sector, y falta de transparencia en los procesos de los ingenios.",
-            fuenteVerificacion: "Registro Oficial; texto de la reforma a la Ley de Ingenios; ARCOTEL / entes de control del sector.",
-            queSeReviso: "Artículos reformados sobre digitalización, trazabilidad y uso de tecnología en ingenios azucareros."
+            quePaso: "Se promulga la Ley Orgánica para la Optimización y Eficiencia de Trámites Administrativos (LOOETA). Establece principios de celeridad, simplicidad, no duplicidad de información y control posterior. Regula el uso de medios electrónicos y la interoperabilidad entre entidades públicas.",
+            porQue: "Los trámites administrativos eran lentos, costosos y repetitivos. La ley buscaba reducir la burocracia, facilitar el acceso por medios electrónicos y que las entidades compartieran información sin pedirla varias veces al ciudadano.",
+            contexto: "Ecuador ya tenía el COA (2017) con bases de gobierno electrónico; la LOOETA profundiza en optimización de trámites. Está listada en gobiernoelectronico.gob.ec/normativa.",
+            impacto: "Obligó a las instituciones a simplificar trámites, usar medios electrónicos y evitar pedir la misma información más de una vez. Sentó bases para portales como Trámites Ciudadanos.",
+            casosResueltos: "Demoras en trámites, costos de gestión elevados, duplicidad de requisitos entre instituciones.",
+            fuenteVerificacion: "Registro Oficial; gobiernoelectronico.gob.ec/normativa (Simplificación de trámites – LOOETA).",
+            queSeReviso: "Texto de la ley en gobiernoelectronico.gob.ec/normativa; disposiciones sobre interoperabilidad, medios electrónicos y simplificación."
         }
     },
     {
@@ -482,18 +503,20 @@ const lawsData = [
         cases: "Filtraciones de datos, derechos ARCO"
     },
     {
+        name: "Código Orgánico de la Economía Social de los Conocimientos, la Creatividad e Innovación (Código Ingenios)",
+        year: 2016,
+        description: "Código orgánico, no una ley simple. Objeto: conocimiento, ciencia y tecnología, innovación, propiedad intelectual, educación superior e investigación. \"Ingenios\" es solo un nombre político/técnico, no el nombre de una ley autónoma.",
+        reason: "Marco legal para la economía del conocimiento, la investigación y la innovación.",
+        cases: "Propiedad intelectual, software, patentes, universidades, industria cultural",
+        url: "https://www.gob.ec/regulaciones/codigo-organico-economia-social-conocimientos-creatividad-innovacion",
+        urlPdf: "https://www.gobiernoelectronico.gob.ec/wp-content/uploads/2018/10/Codigo-Organico-de-la-Economia-Social-de-los-Conocimientos-Creatividad-e-Innovacion.pdf"
+    },
+    {
         name: "Código Orgánico Administrativo",
         year: 2017,
         description: "Regula el gobierno electrónico, el uso de medios y tecnologías electrónicas en la Administración y la protección de derechos en el entorno digital.",
         reason: "Marco general de la administración pública; obligaciones de actuación electrónica.",
         cases: "Trámites electrónicos, notificaciones digitales, interoperabilidad"
-    },
-    {
-        name: "Ley de Ingenios (Reforma)",
-        year: 2018,
-        description: "Incluye disposiciones sobre digitalización y tecnología en el sector azucarero para mejorar eficiencia y transparencia.",
-        reason: "Modernización del sector azucarero incluyendo procesos digitales.",
-        cases: "Necesidad de modernizar procesos en el sector azucarero"
     },
     {
         name: "Ley Orgánica para la Optimización y Eficiencia de Trámites Administrativos",
@@ -624,8 +647,8 @@ const fuentesYMetodologia = {
     leyes: {
         titulo: "Leyes sobre digitalización",
         datosUtilizados: [
-            { nombre: "Normas listadas", valor: "12 principales", origen: "Constitución 2008 (arts. 16-18), Telecomunicaciones 1995 y Orgánica 2010, Comercio Electrónico 2002, Transparencia 2011, Datos Personales 2014/2021, COA 2017, Ingenios reforma 2018, LOOETA 2018, Simplificación Trámites 2021, Transformación Digital y Audiovisual 2023" },
-            { nombre: "Otras normas relacionadas", valor: "Código Ingenios 2016 (conocimiento e innovación), Ley Economía Popular y Solidaria (e-commerce), reglamentos y decretos (ej. Decreto 981 firma electrónica)", origen: "Registro Oficial, gobiernoelectronico.gob.ec/normativa" }
+            { nombre: "Normas listadas", valor: "12 principales", origen: "Constitución 2008 (arts. 16-18), Telecomunicaciones 1995 y Orgánica 2010, Comercio Electrónico 2002, Transparencia 2011, Datos Personales 2014/2021, Código Ingenios 2016, COA 2017, LOOETA 2018, Simplificación Trámites 2021, Transformación Digital y Audiovisual 2023" },
+            { nombre: "Otras normas relacionadas", valor: "Ley Economía Popular y Solidaria (e-commerce), reglamentos y decretos (ej. Decreto 981 firma electrónica). Código Ingenios 2016 está incluido en el listado principal.", origen: "Registro Oficial, gobiernoelectronico.gob.ec/normativa" }
         ],
         dondeSeEncontro: "Registro Oficial del Ecuador (registroficial.gob.ec); portal Gobierno Electrónico (gobiernoelectronico.gob.ec/normativa); Asamblea Nacional; MINTEL.",
         urlFuente: "https://www.gobiernoelectronico.gob.ec/normativa/",
@@ -649,7 +672,7 @@ const fuentesYMetodologia = {
         titulo: "Leyes sobre TIC / digitalización (conteo)",
         datosUtilizados: [
             { nombre: "Cantidad (principales)", valor: "12 normas", origen: "Conteo a partir de Registro Oficial y portal gobiernoelectronico.gob.ec/normativa" },
-            { nombre: "Listado incluido", valor: "Const. 2008, Telecom. 1995 y Orgánica 2010, Comercio Electrónico 2002, Transparencia 2011, Datos Personales (2014 y Ley Orgánica 2021), COA 2017, Ingenios reforma 2018, LOOETA 2018, Simplificación Trámites 2021, Ley Transformación Digital y Audiovisual 2023", origen: "Registro Oficial; MINTEL" }
+            { nombre: "Listado incluido", valor: "Const. 2008, Telecom. 1995 y Orgánica 2010, Comercio Electrónico 2002, Transparencia 2011, Datos Personales (2014 y Ley Orgánica 2021), Código Ingenios 2016, COA 2017, LOOETA 2018, Simplificación Trámites 2021, Ley Transformación Digital y Audiovisual 2023", origen: "Registro Oficial; MINTEL" }
         ],
         dondeSeEncontro: "Registro Oficial (registroficial.gob.ec); Gobierno Electrónico Ecuador (gobiernoelectronico.gob.ec/normativa); Asamblea Nacional.",
         urlFuente: "https://www.gobiernoelectronico.gob.ec/normativa/",

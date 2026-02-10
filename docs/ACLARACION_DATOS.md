@@ -21,7 +21,8 @@ Este documento aclara qué datos son **reales y verificados** y cuáles son **va
 - ✅ **2014**: Ley Orgánica de Datos Personales - **REAL** (la ley existe)
 - ✅ **2016**: Facturación Electrónica Obligatoria (SRI) - **REAL** (implementación confirmada)
 - ✅ **2017**: Ley de Economía Popular y Solidaria - **REAL** (la ley existe)
-- ✅ **2018**: Ley de Ingenios (Reforma) - **REAL** (la reforma existe)
+- ✅ **2018**: LOOETA (Ley Orgánica para la Optimización y Eficiencia de Trámites Administrativos) - **REAL** (la ley existe y figura en gobiernoelectronico.gob.ec/normativa).  
+  **Corrección:** Se eliminó la entrada «Ley de Ingenios (Reforma)» porque **no existe como ley** en el Registro Oficial ni en la Asamblea; el Código Ingenios regula propiedad intelectual, no ingenios azucareros. Ver sustentación en `docs/SUSTENTACION_LEY_INGENIOS.md`.
 - ✅ **2019**: Firma Electrónica Avanzada - **REAL** (implementación confirmada)
 - ✅ **2020**: Pandemia COVID-19 - **REAL** (evento histórico)
 - ✅ **2021**: Ley de Simplificación de Trámites - **REAL** (la ley existe)
