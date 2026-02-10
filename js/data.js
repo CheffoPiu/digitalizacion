@@ -162,7 +162,7 @@ const timelineData = [
             queSeReviso: "Resoluciones que establecen obligatoriedad para empresas grandes; cronograma de implementación; sistema de facturación electrónica del SRI."
         }
     },
-    {
+    { 
         year: 2016,
         title: "Código Ingenios – Código Orgánico de la Economía Social de los Conocimientos, la Creatividad e Innovación",
         description: "Código orgánico (2016) que regula conocimiento, ciencia y tecnología, innovación, propiedad intelectual, educación superior e investigación. Nombre común: Código Ingenios.",
